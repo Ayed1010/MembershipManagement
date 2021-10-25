@@ -2,13 +2,15 @@ package com.example.membershipmanagement.Role;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+/*import org.springframework.security.core.GrantedAuthority;*/
+
+import java.util.Collection;
 
 @Document
-public class Role {
+public class Role /*implements GrantedAuthority */{
     @Id
     private String id ;
     private String name ;
-
     public String getId() {
         return id;
     }
@@ -24,4 +26,9 @@ public class Role {
     public void setName(String name) {
         this.name = name;
     }
+
+  /*  @Override
+    public String getAuthority() {
+        return null;
+    }*/
 }

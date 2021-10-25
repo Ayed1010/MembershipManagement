@@ -2,6 +2,7 @@ package com.example.membershipmanagement.Role;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+/*import org.springframework.security.access.prepost.PreAuthorize;*/
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,11 +21,13 @@ public class RoleController {
         roleService.addRoles(roles);
 
     }
+   // @PreAuthorize("hasAnyAuthority({'admin'})")
     @PostMapping("/addrole")
     public void addRole(@RequestBody final Role role) {
         roleService.addRole(role);
 
     }
+  //  @PreAuthorize("hasAnyAuthority({'adherent'})")
     @GetMapping("/getroles")
     public List<Role>findRole() {
         return roleService.findRole() ;

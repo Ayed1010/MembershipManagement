@@ -1,6 +1,6 @@
 package com.example.membershipmanagement.Role;
 
-import com.example.membershipmanagement.adhesion.Adherent;
+//import com.example.membershipmanagement.adhesion.Adherent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;

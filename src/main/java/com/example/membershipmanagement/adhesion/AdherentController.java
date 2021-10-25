@@ -1,4 +1,4 @@
-package com.example.membershipmanagement.adhesion;
+/*package com.example.membershipmanagement.adhesion;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -11,6 +11,8 @@ import java.util.List;
 @RequestMapping("/adhesion")
 public class AdherentController {
     private AdherentService adherentService ;
+
+
     @Autowired
     public AdherentController(AdherentService adherentService) {
         this.adherentService = adherentService ;
@@ -76,3 +78,4 @@ public class AdherentController {
 
 
 }
+*/

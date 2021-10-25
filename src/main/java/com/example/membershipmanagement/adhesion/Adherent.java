@@ -1,6 +1,7 @@
-package com.example.membershipmanagement.adhesion;
+/*package com.example.membershipmanagement.adhesion;
 
 import com.example.membershipmanagement.Payment.Payment;
+
 import com.example.membershipmanagement.User.User;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -17,6 +18,12 @@ public class Adherent {
     private User user ;
     @DBRef
     private List<Payment> payment  = new ArrayList<>();
+
+    private String password ;
+    private String username ;
+
+
+
     private String categorie;
     private String secteur;
     private String statut;
@@ -27,6 +34,7 @@ public class Adherent {
     private String email;
     private boolean isDeleted  = false;
     private boolean isMembeer = false ;
+
 
     public User getUser() {
         return user;
@@ -135,4 +143,20 @@ public class Adherent {
     public void setMembeer(boolean membeer) {
         isMembeer = membeer;
     }
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserName() {
+        return username;
+    }
+
+    public void setUserName(String userName) {
+        this.username = userName;
+    }
 }
+*/

@@ -1,4 +1,4 @@
-package com.example.membershipmanagement.adhesion;
+/*package com.example.membershipmanagement.adhesion;
 
 import com.example.membershipmanagement.Payment.Payment;
 import com.example.membershipmanagement.Payment.PaymentService;
@@ -6,25 +6,31 @@ import com.example.membershipmanagement.User.User;
 import com.example.membershipmanagement.User.UserServise;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
-
+@Configuration
 @Service
 public class AdherentService {
     private AdherentRepository adherentRepository;
     private UserServise userServise;
     private PaymentService paymentService;
+    private  PasswordEncoder passwordEncoder ;
 
     @Autowired
     public AdherentService(AdherentRepository adherentRepository, UserServise userServise, PaymentService paymentService) {
         this.userServise = userServise;
         this.adherentRepository = adherentRepository;
         this.paymentService = paymentService;
+
     }
 
     public void addAdhernts(List<Adherent> adherents) {
@@ -33,6 +39,7 @@ public class AdherentService {
     }
 
     public void addAdhernt(Adherent adherent) {
+       adherent.setPassword(passwordEncoder.encode(adherent.getPassword()));
         adherentRepository.save(adherent);
     }
 
@@ -227,6 +234,7 @@ return isPayed ;
 
 
 
-
+    @Bean public PasswordEncoder passwordEncoder() { return new BCryptPasswordEncoder(); }
 
 }
+*/

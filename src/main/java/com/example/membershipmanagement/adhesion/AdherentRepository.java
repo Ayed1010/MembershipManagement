@@ -1,4 +1,4 @@
-package com.example.membershipmanagement.adhesion;
+/*package com.example.membershipmanagement.adhesion;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 
@@ -9,5 +9,7 @@ public interface AdherentRepository extends MongoRepository<Adherent,String> {
 
     Adherent findByDomaineAndAdress(String domaine , String adresse  ) ;
     List<Adherent> findByIsDeletedAndIsMembeer(Boolean isDeleted,Boolean isMemeber) ;
+    Adherent findByUserName(String userName) ;
 
 }
+*/
